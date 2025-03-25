@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-class navBar {
+class NavBar {
     constructor(page) {
         this.page = page;
 
@@ -22,4 +22,4 @@ class navBar {
         const sectionLocator = sectionMap[sectionName];
         await sectionLocator.click();
     }
-} module.exports = navBar;
+} module.exports = NavBar;
