@@ -31,13 +31,13 @@ class DashboardPage {
     //->Assert Card is in Column
     async verifyCardInColumn(cardName, columnName) {
         const column = this.column.filter({ hasText: new RegExp(`${columnName}`, "i") });
-        const card = this.card.filter({ hasText: new RegExp(`${cardName}`, "i") }).first();
+        const card = column.filter({ hasText: new RegExp(`${cardName}`, "i") }).first();
         const cardIsVisible = await card.isVisible();
         return cardIsVisible;
     }
 
     //TAGS
-    //->Assert Tag
+    //->Assert Tag Exists in Card
     async verifyCardTags(tagName, cardName) {
         const card = this.card.filter({ hasText: cardName }).first();
         const tag = card.locator('.rounded-full').filter({ hasText: tagName }).first();
