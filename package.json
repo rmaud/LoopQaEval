@@ -1,0 +1,25 @@
+{
+  "name": "loopqaeval",
+  "version": "1.0.0",
+  "description": "LoopQA Technical Evaluation",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmaud/LoopQaEval.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmaud/LoopQaEval/issues"
+  },
+  "homepage": "https://github.com/rmaud/LoopQaEval#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.11"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
