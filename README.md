@@ -1,4 +1,4 @@
-# LoopQA Technical Evaluation [![Playwright Tests]]
+# LoopQA Technical Evaluation Playwright Tests
 
 ## **Overview**
 This repository contains a Playwright test suite designed to validate specific paramaters in a demo application. This test suite utilizes data-driven testing techniques as well as the page pobject model (POM) to ensure both scalability and maintainability. 
