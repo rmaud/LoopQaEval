@@ -30,8 +30,8 @@ class DashboardPage {
     //CARDS
     //->Assert Card is in Column
     async verifyCardInColumn(cardName, columnName) {
-        const column = this.column.filter({ hasText: new RegExp(`${columnName}`, "i") });
-        const card = column.filter({ hasText: new RegExp(`${cardName}`, "i") }).first();
+        const column = this.column.filter({ hasText: new RegExp(`${columnName}`, "i") }).first();
+        const card = column.locator(this.card).filter({ hasText: new RegExp(`${cardName}`, "i") }).first();
         const cardIsVisible = await card.isVisible();
         return cardIsVisible;
     }
@@ -40,7 +40,7 @@ class DashboardPage {
     //->Assert Tag Exists in Card
     async verifyCardTags(tagName, cardName) {
         const card = this.card.filter({ hasText: cardName }).first();
-        const tag = card.locator('.rounded-full').filter({ hasText: tagName }).first();
+        const tag = card.locator(this.cardTag).filter({ hasText: tagName }).first();
         const isTagVisible = await tag.isVisible();
         return isTagVisible;
     }

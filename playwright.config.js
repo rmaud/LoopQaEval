@@ -13,7 +13,7 @@ export default defineConfig({
   use: {
     baseURL: process.env.BASE_URL,
     trace: 'on-first-retry',
-    headless: false,
+    headless: true,
   },
   projects: [
     {
@@ -21,15 +21,15 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
   ],
 });
 
